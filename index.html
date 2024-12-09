@@ -10,280 +10,76 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <style>
-        /* Global Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        a:hover {
-            color: #007bff;
-        }
-
-        .container {
-            max-width: 1200px;
-        }
-
-        /* Navbar */
-        .navbar {
-            background: #1a1a2e;
-            padding: 1rem 2rem;
-        }
-
-        .navbar-brand {
-            color: #fff;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .navbar-nav .nav-link {
-            color: #fff;
-            font-size: 1rem;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #00d4ff;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 100vh;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/hero-bg.jpeg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-        }
-
-        .hero .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 2;
-        }
-
-        .hero .content h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .hero .content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        .hero .btn-primary {
-            padding: 12px 30px;
-            font-size: 1rem;
-            border-radius: 30px;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 50px 0;
-            background-color: #f8f9fa;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 30px;
-            border-radius: 15px;
-            background-color: white;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .feature-card .icon {
-            font-size: 3rem;
-            color: #007bff;
-            margin-bottom: 20px;
-        }
-
-        /* Courses Section */
-        .courses {
-            padding: 50px 0;
-            background-color: white;
-        }
-
-        .course-card {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .course-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .course-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .course-card .card-body {
-            padding: 20px;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 50px 0;
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-        }
-
-        .testimonials .quote-icon {
-            font-size: 3rem;
-            color: white;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1a1a2e;
-            color: white;
-            padding: 20px 0;
-        }
-
-        footer a {
-            color: #00d4ff;
-        }
-
-        footer a:hover {
-            color: white;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        a:hover {
-            color: #007bff;
-        }
-
-        .container {
-            max-width: 1200px;
-        }
-
-        /* Navbar */
-        .navbar {
-            background: #1a1a2e;
-            padding: 1rem 2rem;
-        }
-
-        .navbar-brand {
-            color: #fff;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .navbar-nav .nav-link {
-            color: #fff;
-            font-size: 1rem;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #00d4ff;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            background-color: #f8f9fa;
-            color: white;
-        }
-
-        .carousel {
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .carousel img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-        }
-
-        .hero .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 2;
-        }
-
-        .hero .content h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            font-weight: bold;
-            color: #1a1a2e;
-        }
-
-        .hero .content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: #333;
-        }
-
-        .hero .btn-primary {
-            padding: 12px 30px;
-            font-size: 1rem;
-            border-radius: 30px;
-        }
-
-        .carousel img {
-      width: 100%;
-      height: auto; /* Full aspect ratio without cropping */
-    }
-
-    /* Welcome Card */
-    .welcome-card {
-      margin-top: -50px;
-      z-index: 1;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      text-align: center;
-    }
-
-    .welcome-card h1 {
-      font-size: 2.5rem;
-      color: #007bff;
-      margin-bottom: 20px;
-    }
-
-    .welcome-card p {
-      font-size: 1.2rem;
-      color: #555;
-    }
+      /* Global Styles */
+      body {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+        line-height: 1.6;
+      }
+  
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+  
+      a:hover {
+        color: #007bff;
+      }
+  
+      .container {
+        max-width: 1200px;
+      }
+  
+      /* Navbar */
+      .navbar {
+        background: #1a1a2e;
+        padding: 1rem 2rem;
+      }
+  
+      .navbar-brand {
+        color: #fff !important;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+  
+      .navbar-nav .nav-link {
+        color: #fff !important;
+        font-size: 1rem;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+      }
+  
+      .navbar-nav .nav-link:hover {
+        color: #00d4ff !important;
+      }
+  
+      /* Hero Section */
+      .carousel img {
+        width: 100%;
+        height: auto; /* Full aspect ratio without cropping */
+      }
+  
+      /* Welcome Card */
+      .welcome-card {
+        margin-top: -50px;
+        z-index: 1;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        text-align: center;
+      }
+  
+      .welcome-card h1 {
+        font-size: 2.5rem;
+        color: #007bff;
+        margin-bottom: 20px;
+      }
+  
+      .welcome-card p {
+        font-size: 1.2rem;
+        color: #555;
+      }
     </style>
 </head>
 
@@ -410,6 +206,7 @@
           });
       });
   </script>
+  
 
     
 </body>
